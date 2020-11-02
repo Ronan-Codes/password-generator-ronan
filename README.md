@@ -1,6 +1,6 @@
 # Password Generator
 
-## Description
+### Description
 * A random password is generated based on criteria provided by the user. The criteria is provided through prompts.
 
 * After clicking the "Generate Password" button, the user is prompted to choose the password length. The answer must be within the range of 8-128. If not, the user will be prompted again until a valit number is provided.
@@ -9,11 +9,11 @@
 
 * After all parameters have been defined, a random password will be generated inside the password box.
 
-## Technologies Used: HTML, CSS, & JavaScript
+### Technologies Used: HTML, CSS, & JavaScript
 
-## Screenshot
+### Screenshot
 ![](./Develop/password-generator-screenshot.png)
 
-## Link
+### Link
 * [Ronan's Password Generator](https://galv-ronan.github.io/pasword-generator-ronan/)
 * [GitHub Link](https://github.com/galv-ronan/pasword-generator-ronan.git)
