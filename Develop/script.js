@@ -10,9 +10,11 @@ var confirmUpper;
 var confirmLower;
 var confirmNumeric;
 
+var passwordCharacters = []
+
 // Arrays
 var symbols = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
-var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -42,24 +44,39 @@ var generatePassword = function() {
         var confirmNumeric = confirm("Click OK to confirm if you would like to include numeric characters");
       }
 
-      // Assign 
+      // Determining the password
+
+      var passwordCharacters = []
+
+    if (confirmUpper) {
+      passwordCharacters = passwordCharacters.concat(upperLetters)
+    }
+
+    if (confirmLower) {
+      passwordCharacters = passwordCharacters.concat(lowerLetters)
+    }
+
+    if (confirmSymbols) {
+      paswordCharacters = passwordCharacters.concat(symbols)
+    }
+
+    if (confirmNumeric) {
+      passwordCharacters = passwordCharacters.concat(numbers)
+    }
+
+      // console.log (passwordCharacters)
+
+      // Loop for random characters for randomPassword
+      var randomPassword = ""
+
+      for (var i = 0; i < confirmLength; i++) {
+        randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+        console.log(randomPassword)
+      }
+
+      return randomPassword
 }
 
-
-
-
-
-
-
-
-
-
-var generatePassword = function() {
-  for (i = 0; i <= passLength.length; i++) {
-  const answer = 'abcdefghijklmnopqrstuvwxyz!@#$%^&*(){}=<>/,.0123456789'
-  return answer[Math.floor(Math.random() * answer.length)]
-}
-}
 
 // Write password to the #password input
 function writePassword() {
