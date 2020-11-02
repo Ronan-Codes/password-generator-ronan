@@ -1,6 +1,22 @@
-// Assignment code here
+// This Password Generator provides a password based on the criteria that the user specifies.
 
-// Generator functions - http://www.net-comber.com/charset.html
+// Add event listener to generate button
+var generateBtn = document.querySelector("#generate").addEventListener("click", writePassword);
+
+// Variable Criteria Declarations
+var confirmLength = ""
+var confirmSymbols;
+var confirmUpper;
+var confirmLower;
+var confirmNumeric;
+
+// Arrays
+var symbols = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
+var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+
 
 //length
 var getLength = function () {
