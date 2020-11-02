@@ -22,15 +22,11 @@ var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
 var generatePassword = function() {
   var confirmLength = (prompt("Choose the length of your password. Pick a number from 8-128."))
 
-    while (confirmLength <= 7 || confirmLength >= 129) {
-      alert("The password length must be between 8-128 characters. Pick a valid number.");
+    while (confirmLength <= 7 || confirmLength >= 129 || (isNaN(confirmLength))) {
+      alert("The password length must be between 8-128 characters. Or you've inserted an invalid character. Please pick a valid number.");
       var confirmLength = (prompt("Choose the length of your password. Pick a number from 8-128."));
     }
 
-    /*if (!Number.isInteger(confirmLength)) {
-      alert("Invalid input, please try again.")
-      generatePassword()
-    }*/
 
     // Alert the user how many characters the password will have
     alert("Your password will have " + confirmLength + " characters.");
