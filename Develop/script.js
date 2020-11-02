@@ -27,10 +27,10 @@ var generatePassword = function() {
       var confirmLength = (prompt("Choose the length of your password. Pick a number from 8-128."));
     }
 
-    if (!(/[0-9]/.test(confirmLength))) {
+    /*if (!Number.isInteger(confirmLength)) {
       alert("Invalid input, please try again.")
       generatePassword()
-    }
+    }*/
 
     // Alert the user how many characters the password will have
     alert("Your password will have " + confirmLength + " characters.");
